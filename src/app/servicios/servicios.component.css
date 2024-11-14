@@ -1,0 +1,45 @@
+/* Fondo blanco para la sección de servicios */
+#servicios {
+  background-color: #ffffff; /* Fondo blanco para la sección */
+}
+
+/* Fondo negro y texto blanco para cada div dentro de icon-box */
+.icon-box {
+  background-color: #000000e3; /* Fondo negro */
+  color: #ffffff; /* Texto blanco */
+  padding: 20px; /* Espaciado interno */
+}
+
+/* Estilo para los títulos (enlaces) dentro de icon-box */
+.icon-box h4 a {
+  color: #ffffff; /* Títulos blancos */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: bold; /* Negrita */
+}
+
+/* Estilo para los iconos a la izquierda de los títulos */
+.icon-box i {
+  color: #b53638; /* Iconos rojos */
+  margin-right: 10px;
+  background: none; /* Espacio entre el icono y el título */
+}
+
+/* Cambio de color de los títulos al pasar el mouse */
+.icon-box h4 a:hover {
+  color: #f39c12; /* Títulos dorados al pasar el mouse */
+}
+
+/* Asegura que los iconos no afecten el tamaño del contenedor */
+.icon-box .d-flex {
+  align-items: center; /* Centrado vertical de los iconos con el texto */
+}
+
+/* Estilo de la línea roja debajo del título "Servicios" */
+.underline {
+  display: block;
+  width: 60px; /* Longitud de la línea */
+  height: 3px; /* Altura de la línea */
+  background-color: #b53638; /* Color rojo */
+  margin: 10px auto 0;
+  margin-bottom: 10px; /* Centrado y margen superior */
+}

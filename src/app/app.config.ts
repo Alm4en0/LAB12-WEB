@@ -1,9 +1,13 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
-
+// app.config.ts
+import { provideRouter, RouterModule } from '@angular/router';
 import { routes } from './app.routes';
-import { provideClientHydration } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
 
-export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration()]
+export const appConfig = {
+  providers: [provideRouter(routes)],
+  declarations: [AppComponent],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
+
+  bootstrap: [AppComponent]
 };

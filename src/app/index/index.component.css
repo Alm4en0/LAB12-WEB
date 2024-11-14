@@ -1,0 +1,61 @@
+/* Contenedor del banner */
+.banner {
+  position: relative; /* Necesario para la capa superpuesta */
+  background-image: url("/assets/fondo5.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white; /* Cambia el color de texto a blanco */
+  display: flex;
+  align-items: center;
+}
+
+/* Capa de superposición oscura */
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Sombra superpuesta */
+  z-index: 1; /* Asegura que el overlay esté detrás del contenido */
+}
+
+/* Alineación del texto a la derecha y espacio desde el borde */
+.container {
+  position: relative; /* Permite que el texto esté encima del overlay */
+  z-index: 2;
+  text-align: right;
+  padding: 2rem;
+  color: white; /* Color blanco para asegurar visibilidad */
+}
+
+/* Estilos del título y el eslogan */
+.display-4 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.lead {
+  font-size: 1.2em;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2em;
+  }
+  .lead {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 576px) {
+  .display-4 {
+    font-size: 1.5em;
+  }
+  .lead {
+    font-size: 0.9em;
+  }
+}

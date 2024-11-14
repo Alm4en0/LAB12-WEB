@@ -1,0 +1,32 @@
+<section id="productos" class="productos section-bg py-5">
+  <div class="container text-dark" data-aos="fade-up">
+    <h2 class="mb-4 text-center">Nuestros Productos</h2>
+    <!-- Filtro por categoría -->
+    <div class="mb-4 text-center">
+      <button class="btn btn-outline-danger m-2"
+        (click)="filtrarProductos('todos')">Todos</button>
+      <button class="btn btn-outline-danger m-2"
+        (click)="filtrarProductos('categoria1')">Disco, platos y collarin de
+        embrague</button>
+      <button class="btn btn-outline-danger m-2"
+        (click)="filtrarProductos('categoria2')">Pastilla de zapato y
+        freno</button>
+      <button class="btn btn-outline-danger m-2"
+        (click)="filtrarProductos('categoria3')">Piñon y parte de caja</button>
+    </div>
+
+    <!-- Contenedor de Productos -->
+    <div class="row g-1">
+      <!-- Producto -->
+      <div class="col-md-6 col-lg-4 mb-4"
+        *ngFor="let producto of obtenerProductos()"
+        [ngClass]="producto.categoria">
+        <!-- Enviar solo los datos necesarios -->
+        <app-cards
+          [imageSrc]="producto.imagen"
+          [title]="producto.nombre">
+        </app-cards>
+      </div>
+    </div>
+  </div>
+</section>

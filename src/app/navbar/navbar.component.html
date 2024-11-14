@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg sticky-top">
+	<div class="container">
+		<a class="navbar-brand" routerLink="/">
+			<img src="assets/LOGO_IKOMI.png" alt="IKOMI Logo"
+				style="width: 300px; height: 50px;">
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+			data-bs-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ms-auto">
+				<li class="nav-item"><a class="nav-link" routerLink="/" fragment="index"><i
+							class="fas fa-home"></i> Inicio</a></li>
+				<li class="nav-item"><a class="nav-link" routerLink="/"
+						fragment="nosotros"><i class="fas fa-users"></i> Nosotros</a></li>
+				<li class="nav-item"><a class="nav-link" routerLink="/"
+						fragment="servicios"><i class="fas fa-cogs"></i> Servicios</a></li>
+				<li class="nav-item"><a class="nav-link" routerLink="/"
+						fragment="productos"><i class="fas fa-box"></i> Productos</a></li>
+				<li class="nav-item"><a class="nav-link" routerLink="/" fragment="marcas"><i
+							class="fas fa-tags"></i> Marcas</a></li>
+				<li class="nav-item"><a class="nav-link" routerLink="/"
+						fragment="contactanos"><i class="fas fa-phone"></i> Contáctanos</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<router-outlet></router-outlet>
